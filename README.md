@@ -42,7 +42,7 @@ The app is completely developed in [Flutter](https://flutter.dev/). It uses the 
 ---
 
 ## Test the app!
-Download the [Android APK (v0.1.0)](https://github.com/YourUsername/trash_tracker/releases) from the releases section.
+Download the [Android APK (v0.1.0)](https://github.com/arnavish/blr-trash-tracker/releases) from the releases section.
 
 ### Or, run it locally:
 1. Clone the repo:
@@ -60,7 +60,7 @@ Download the [Android APK (v0.1.0)](https://github.com/YourUsername/trash_tracke
    ```
 
 
-*Note: Since this is a prototype, I'm using Provider to store data in-memory. The data resets when you fully restart the app.*
+*Note: Since this is a prototype, provider is used to store data in-memory. The data resets when you fully restart the app.*
 
 ---
 
@@ -71,6 +71,7 @@ The project currently focuses on frontend UI, state management, and mapping logi
 * **No Persistent Backend:** Currently, state is managed in-memory using the `provider` package. If the app is closed, all reports reset. The plan is to integrate a backend like Firebase, Supabase, or PostgreSQL to persist data globally and actually store the uploaded images and reports.
 * **Basic Map Visualizations:** The map shows individual pins which can get cluttered in highly affected areas. I wanted to implement a heatmap to highlight affected areas based on the frequency and density of reports.
 * **Authenticity of Reports:** The reports rely on an honor system. There is no way to actually verify that an entry is valid, and with the current state of the app, invalid entries can be spammed. The upvote system is meant to be one way of maintaining authenticity, but there needs to be a better way to implement this. One way to reduce spam is to have authentication via OTPs, but I do want to avoid personal data collection when possible. This will have to be further ruminated upon.
+* **iOS Support:** The code is cross-platform, but has only been tested for Android as of now. The code needs to be compiled on a Mac to release a build for iOS.
 
 Some other future plans are:
 * **Involve the Authorities:** The app is currently citizen-facing only. The plan is to include a way for the BBMP and Municipal authorities to interact with reports and mark them as resolved, rather than just the option that exists now of users removing their reports once the problem is resolved.
