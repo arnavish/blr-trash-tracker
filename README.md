@@ -71,6 +71,7 @@ The project currently focuses on frontend UI, state management, and mapping logi
 * **No Persistent Backend:** Currently, state is managed in-memory using the `provider` package. If the app is closed, all reports reset. The plan is to integrate a backend like Firebase, Supabase, or PostgreSQL to persist data globally and actually store the uploaded images and reports.
 * **Basic Map Visualizations:** The map shows individual pins which can get cluttered in highly affected areas. I wanted to implement a heatmap to highlight affected areas based on the frequency and density of reports.
 * **Authenticity of Reports:** The reports rely on an honor system. There is no way to actually verify that an entry is valid, and with the current state of the app, invalid entries can be spammed. The upvote system is meant to be one way of maintaining authenticity, but there needs to be a better way to implement this. One way to reduce spam is to have authentication via OTPs, but I do want to avoid personal data collection when possible. This will have to be further ruminated upon.
+* **Neighbourhood limits:** In the current state of the app, the neighbourhood limits are not defined accurately for every single area. There needs to be a proper definition for what areas need to be covered. If this idea is to be developed further, this needs to be improved. 
 * **iOS Support:** The code is cross-platform, but has only been tested for Android as of now. The code needs to be compiled on a Mac to release a build for iOS.
 
 Some other future plans are:
