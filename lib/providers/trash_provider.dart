@@ -52,8 +52,9 @@ class TrashProvider extends ChangeNotifier {
   DateTime _getCutoff(String timeFilter) {
     DateTime now = DateTime.now();
     if (timeFilter == 'Past Week') return now.subtract(const Duration(days: 7));
-    if (timeFilter == 'Past Month')
+    if (timeFilter == 'Past Month') {
       return now.subtract(const Duration(days: 30));
+    }
     return now.subtract(const Duration(days: 365));
   }
 
